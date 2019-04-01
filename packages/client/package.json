@@ -1,0 +1,44 @@
+{
+  "name": "@vaster/client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/runtime": "^7.0.0",
+    "@vaster/common": "1.0.0",
+    "antd": "^3.7.3",
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.3.5",
+    "apollo-link-http": "^1.5.4",
+    "formik": "^1.0.1",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "immutable": "^3.8.2",
+    "react": "^16.5.2",
+    "react-apollo": "^2.1.9",
+    "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts-ts": "^2.17.0",
+    "yup": "^0.26.6"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "schema:download": "apollo schema:download --endpoint=http://localhost:4000",
+    "codegen:generate": "apollo codegen:generate --queries=./src/modules/**/*.tsx --schema=schema.json --target=typescript --outputFlat ./src/schemaTypes.ts",
+    "gen-types": "npm run schema:download && npm run codegen:generate"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.5",
+    "@types/node": "^10.11.0",
+    "@types/prop-types": "^15.5.5",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/yup": "^0.24.9",
+    "apollo-codegen": "^0.20.2",
+    "typescript": "^2.9.2"
+  }
+}

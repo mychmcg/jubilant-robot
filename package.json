@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build:client": "lerna run build --scope={@vaster/common,@vaster/client}",
+    "build:server": "lerna run build --scope={@vaster/common,@vaster/server}"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/rimraf",
+      "**/rimraf/**"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  }
+}
